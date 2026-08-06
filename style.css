@@ -1,0 +1,305 @@
+/* ===============================
+   Google Font
+==================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===============================
+   Body
+==================================*/
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1d4ed8,#3b82f6);
+    background-size:300% 300%;
+    animation:bgMove 12s ease infinite;
+    color:#fff;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===============================
+   Navbar
+==================================*/
+.navbar{
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    font-size:1.6rem;
+    letter-spacing:.5px;
+}
+
+/* ===============================
+   Main Card
+==================================*/
+.game-card{
+    border-radius:25px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    color:white;
+}
+
+/* ===============================
+   Score Boxes
+==================================*/
+.score-box{
+    border-radius:18px;
+    padding:22px;
+    color:white;
+    margin-bottom:15px;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+.score-box:hover{
+    transform:translateY(-6px);
+}
+
+.score-box h2{
+    font-size:2.3rem;
+    font-weight:700;
+}
+
+.score-box p{
+    margin:0;
+    font-size:1rem;
+    font-weight:600;
+}
+
+/* ===============================
+   Choice Buttons
+==================================*/
+.choice-btn{
+
+    width:170px;
+    height:170px;
+
+    margin:15px;
+
+    border:none;
+    border-radius:25px;
+
+    font-size:1.4rem;
+    font-weight:600;
+
+    color:white;
+
+    transition:.35s;
+
+    box-shadow:0 12px 20px rgba(0,0,0,.25);
+
+}
+
+.choice-btn:hover{
+
+    transform:translateY(-10px) scale(1.05);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.35);
+
+}
+
+.choice-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* Individual Colors */
+
+.btn-rock{
+
+    background:linear-gradient(135deg,#475569,#334155);
+
+}
+
+.btn-paper{
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+}
+
+.btn-scissors{
+
+    background:linear-gradient(135deg,#dc2626,#ef4444);
+
+}
+
+/* ===============================
+   Result Card
+==================================*/
+
+.result-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    color:#111827;
+
+}
+
+.result-card h5{
+
+    font-weight:700;
+
+}
+
+#userChoice,
+#computerChoice{
+
+    font-size:2rem;
+    font-weight:700;
+
+}
+
+#resultText{
+
+    font-size:2rem;
+
+    margin-top:20px;
+
+}
+
+/* ===============================
+   Reset Button
+==================================*/
+
+.btn-warning{
+
+    border-radius:40px;
+    font-weight:600;
+    padding:12px 40px;
+
+}
+
+/* ===============================
+   Footer
+==================================*/
+
+footer{
+
+    margin-top:50px;
+
+    background:rgba(0,0,0,.25);
+
+}
+
+/* ===============================
+   Responsive
+==================================*/
+
+@media(max-width:768px){
+
+.choice-btn{
+
+width:130px;
+height:130px;
+
+font-size:1.1rem;
+
+margin:8px;
+
+}
+
+.score-box{
+
+margin-bottom:20px;
+
+}
+
+#resultText{
+
+font-size:1.5rem;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.choice-btn{
+
+width:110px;
+height:110px;
+
+font-size:1rem;
+
+}
+
+.score-box h2{
+
+font-size:1.8rem;
+
+}
+
+.game-card{
+
+padding:10px;
+
+}
+
+}
+
+/* ===============================
+   Animations
+==================================*/
+
+.result-card{
+
+animation:fadeIn .7s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.choice-btn{
+
+animation:pop .7s;
+
+}
+
+@keyframes pop{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}

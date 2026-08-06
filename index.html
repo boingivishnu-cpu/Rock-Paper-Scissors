@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-9">
+
+        <div class="card shadow-lg border-0 game-card">
+
+            <div class="card-body p-5">
+
+                <h1 class="text-center mb-4 fw-bold text-primary">
+                    🎮 Rock Paper Scissors
+                </h1>
+
+                <p class="text-center text-muted mb-5">
+                    Choose your move and challenge the computer!
+                </p>
+
+                <!-- Scoreboard -->
+
+                <div class="row text-center mb-5">
+
+                    <div class="col-md-3">
+                        <div class="score-box bg-success">
+                            <h2 id="userScore">{{ user_score }}</h2>
+                            <p>You</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="score-box bg-danger">
+                            <h2 id="computerScore">{{ computer_score }}</h2>
+                            <p>Computer</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="score-box bg-warning text-dark">
+                            <h2 id="tieScore">{{ tie_score }}</h2>
+                            <p>Ties</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="score-box bg-primary">
+                            <h2 id="round">{{ round }}</h2>
+                            <p>Rounds</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Game Buttons -->
+
+                <div class="text-center mb-5">
+
+                    <button class="btn btn-lg btn-rock choice-btn"
+                        onclick="playGame('rock')">
+
+                        🪨
+                        <br>
+                        Rock
+
+                    </button>
+
+                    <button class="btn btn-lg btn-paper choice-btn"
+                        onclick="playGame('paper')">
+
+                        📄
+                        <br>
+                        Paper
+
+                    </button>
+
+                    <button class="btn btn-lg btn-scissors choice-btn"
+                        onclick="playGame('scissors')">
+
+                        ✂️
+                        <br>
+                        Scissors
+
+                    </button>
+
+                </div>
+
+                <!-- Result -->
+
+                <div class="card shadow-sm border-0 result-card">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="mb-4">
+                            Game Result
+                        </h4>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <h5>Your Choice</h5>
+
+                                <div id="userChoice"
+                                     class="display-6 mt-3">
+                                    -
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <h5>Computer Choice</h5>
+
+                                <div id="computerChoice"
+                                     class="display-6 mt-3">
+                                    -
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <h2 id="resultText"
+                            class="fw-bold text-primary">
+
+                            Make Your Move
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="text-center mt-5">
+
+                    <button
+                        class="btn btn-warning btn-lg px-4"
+                        onclick="resetGame()">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Reset Game
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
